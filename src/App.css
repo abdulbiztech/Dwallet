@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  width: 350px;
+  height: 600px;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #0062ff, #da61ff);
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.headerLogo {
+  height: 50px;
+  margin-left: 20px;
+}
+
+.dropdown {
+  margin-right: 20px;
+}
