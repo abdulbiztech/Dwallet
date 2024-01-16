@@ -9,7 +9,7 @@ function Home() {
     <>
       <div className="content">
         <img src={dwallet} alt="logo" className="frontPageLogo" />
-        <h2> Hey There 👋 </h2>
+        <h2> Let's get started </h2>
         <h4 className="h4"> Welcome to your Web3 Wallet</h4>
         <Button
           onClick={() => navigate("/createAccount")}
@@ -27,7 +27,12 @@ function Home() {
         </Button>
         <p className="frontPageBottom">
           Find more :{" "}
-          <a href="https://decentrawood.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://decentrawood.com/"
+            className="frontPageBottom-anchor"
+            target="_blank"
+            rel="noreferrer"
+          >
             Decentrawood
           </a>
         </p>

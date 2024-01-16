@@ -15,6 +15,30 @@ function CreateAccount({ setSeedPhrase, setWallet }) {
     setSeedPhrase(newSeedPhrase);
     setWallet(ethers.Wallet.fromPhrase(newSeedPhrase).address);
   }
+  const handleCardClick = () => {
+    if (newSeedPhrase) {
+      // Create a temporary textarea element
+      const textArea = document.createElement("textarea");
+
+      // Set its value to the seed phrase
+      textArea.value = newSeedPhrase;
+
+      // Append the textarea element to the document
+      document.body.appendChild(textArea);
+
+      // Select the text inside the textarea
+      textArea.select();
+
+      // Execute the copy command
+      document.execCommand("copy");
+
+      // Remove the textarea element
+      document.body.removeChild(textArea);
+
+      // Display a success message
+      alert("Text copied to clipboard!");
+    }
+  };
   return (
     <>
       <div className="content">
@@ -32,7 +56,11 @@ function CreateAccount({ setSeedPhrase, setWallet }) {
         >
           Generate Seed Phrase
         </Button>
-        <Card className="seedPhraseContainer">
+        <Card
+          className="seedPhraseContainer"
+          onClick={handleCardClick}
+          hoverable
+        >
           {newSeedPhrase && (
             <pre style={{ whiteSpace: "pre-wrap" }}>{newSeedPhrase}</pre>
           )}
