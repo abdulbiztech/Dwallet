@@ -1,0 +1,11 @@
+{
+  "name": "Dwallet",
+  "version": "1.0.0",
+  "description": "Decentrawood Wallet Extension",
+  "manifest_version": 1,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open Wallet"
+  },
+  "permissions": ["storage"]
+}
