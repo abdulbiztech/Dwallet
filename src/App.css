@@ -15,8 +15,12 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  color: #fffbe6;
-  background: linear-gradient(94deg, #5898ff, #c98fdb);
+  /* color: #fffbe6; */
+  color: #000000;
+  background: #ffffff;
+
+
+  /* background: linear-gradient(94deg, #5898ff, #c98fdb); */
   margin: auto;
   margin-top: 20px;
 }
@@ -64,7 +68,8 @@ a:visited {
 header {
   width: 100%;
   height: 80px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background-color: #787777;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,7 +87,7 @@ header {
 
 .content {
   text-align: center;
-  width: 350px;
+  width: 100%;
   height: 520px;
   /* overflow-y: auto; */
   justify-content: flex-start;
@@ -151,10 +156,10 @@ header {
 }
 
 .walletView {
-  width: 320px;
+  width: 100%;
   padding: 10px;
   height: 100%;
-  color: #fff;
+  color: #000;
 
   overflow-y: auto;
 }
@@ -168,11 +173,14 @@ header {
 }
 
 .nftImage {
+  display: flex;
+  margin: auto;
   margin-bottom: 10px;
   height: 240px;
   width: 240px;
   object-fit: cover;
   border-radius: 10px;
+  align-items: center;
 }
 
 @media screen and (max-width: 665px) {
@@ -191,8 +199,9 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column;
-    color: #fffbe6;
-    background: linear-gradient(94deg, #5898ff, rgb(137, 40, 167));
+    color: #000000;
+    /* background: linear-gradient(94deg, #5898ff, rgb(137, 40, 167)); */
+    background: #ffffff;
     margin: auto;
     margin-top: 20px;
   }
