@@ -8,7 +8,6 @@ function CreateAccount({ setSeedPhrase, setWallet }) {
   const [newSeedPhrase, setNewSeedPhrase] = useState(null);
   function generateWallet() {
     const mnemonic = ethers.Wallet.createRandom().mnemonic.phrase;
-    // console.log(mnemonic);
     setNewSeedPhrase(mnemonic);
   }
   function setWalletAndMnemonic() {
@@ -17,25 +16,17 @@ function CreateAccount({ setSeedPhrase, setWallet }) {
   }
   const handleCardClick = () => {
     if (newSeedPhrase) {
-      // Create a temporary textarea element
       const textArea = document.createElement("textarea");
 
-      // Set its value to the seed phrase
       textArea.value = newSeedPhrase;
 
-      // Append the textarea element to the document
       document.body.appendChild(textArea);
 
-      // Select the text inside the textarea
       textArea.select();
-
-      // Execute the copy command
       document.execCommand("copy");
 
-      // Remove the textarea element
       document.body.removeChild(textArea);
 
-      // Display a success message
       alert("Text copied to clipboard!");
     }
   };

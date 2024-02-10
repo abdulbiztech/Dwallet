@@ -8,14 +8,18 @@ function Home() {
 
   const handleCheck = () => {
     setIsChecked(!isChecked);
-    // console.log(isChecked);
   };
   return (
     <>
       <div className="content">
-        <img src={dwallet} alt="logo" className="frontPageLogo" />
         <h2> Let's get started </h2>
-        <h4 className="h4"> Welcome to your Web3 Wallet</h4>
+        <p>
+          Trusted by millions, MetaMask is a secure wallet making the world of
+          web3 accessible to all.
+        </p>
+        <img src={dwallet} alt="logo" className="frontPageLogo" />
+
+        {/* <h4 className="h4"> Welcome to your Web3 Wallet</h4> */}
         <div className="terms">
           <input
             type="checkbox"
@@ -28,9 +32,17 @@ function Home() {
           </label>
         </div>
 
-        <Button
+        {/* <Button
           onClick={() => navigate("/createAccount")}
-          className="frontPageButton"
+          className="button btn--rounded btn-primary"
+          type="primary"
+          disabled={!isChecked}
+        >
+          Create A Wallet
+        </Button> */}
+        <Button
+          onClick={() => navigate("/createPassword")}
+          className="button btn--rounded btn-primary"
           type="primary"
           disabled={!isChecked}
         >
@@ -38,7 +50,7 @@ function Home() {
         </Button>
         <Button
           onClick={() => navigate("/recoverAccount")}
-          className="frontPageButton"
+          className="button btn--rounded btn-primary"
           type="default"
           disabled={!isChecked}
         >
